@@ -298,10 +298,27 @@ ul { margin: 0; padding: 0; list-style: none; }
 .hero-hadith::before { content: ""; width: 40px; height: 1.5px; background: var(--gold-deep); flex-shrink: 0; }
 
 .hero-visual { position: relative; display: grid; place-items: center; aspect-ratio: 1; max-width: 520px; width: 100%; margin-inline: auto; }
-.rosette { position: absolute; inset: 0; width: 100%; height: 100%; color: var(--olive); }
-.rosette g { transform-box: view-box; }
-.rosette .r-outer { transform-origin: 50% 50%; animation: spin 90s linear infinite; }
-.rosette .r-inner { transform-origin: 50% 50%; animation: spin 60s linear infinite reverse; }
+/* هالة نورانية هادئة: حلقات تتسع ببطء + مدار خفيف */
+.aura { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.aura .ring {
+  fill: none; stroke: var(--gold-deep); stroke-width: 1;
+  transform-box: view-box; transform-origin: 50% 50%;
+  opacity: 0; animation: ripple 12s cubic-bezier(.25, .6, .3, 1) infinite;
+}
+.aura .ring:nth-of-type(2) { animation-delay: -3s; }
+.aura .ring:nth-of-type(3) { animation-delay: -6s; }
+.aura .ring:nth-of-type(4) { animation-delay: -9s; }
+@keyframes ripple {
+  0% { transform: scale(.7); opacity: 0; }
+  15% { opacity: .45; }
+  100% { transform: scale(1.6); opacity: 0; }
+}
+.aura .orbit { transform-box: view-box; transform-origin: 50% 50%; animation: spin 120s linear infinite; }
+.aura .orbit.rev { animation-duration: 160s; animation-direction: reverse; }
+.aura .track { fill: none; stroke: var(--olive); stroke-width: 1; stroke-dasharray: 1 9; stroke-linecap: round; opacity: .55; }
+.aura .track.faint { opacity: .3; stroke-dasharray: none; }
+.aura .bead { fill: var(--gold-deep); opacity: .7; }
+.aura .bead.sm { opacity: .5; }
 @keyframes spin { to { transform: rotate(360deg); } }
 .hero-visual .halo {
   position: absolute; inset: 18%; border-radius: 50%;
@@ -471,50 +488,6 @@ ul { margin: 0; padding: 0; list-style: none; }
 .teaser:hover .c1 { transform: rotate(14deg) translateX(-14px); }
 .teaser:hover .c3 { transform: rotate(-18deg) translateX(14px); }
 
-/* ---------- الموقع والتواصل ---------- */
-.contact-grid { display: grid; grid-template-columns: 1.15fr 1fr; gap: clamp(18px, 3vw, 28px); }
-.map-card {
-  position: relative; border-radius: var(--radius-lg); overflow: hidden; min-height: 400px; isolation: isolate;
-  background: var(--sand); border: 1px solid var(--line); display: flex; flex-direction: column; justify-content: flex-end;
-}
-.map-art { position: absolute; inset: 0; z-index: -1; width: 100%; height: 100%; }
-.map-pin {
-  position: absolute; top: 40%; left: 50%; transform: translate(-50%, -100%);
-  width: 64px; height: 64px; display: grid; place-items: center;
-}
-.map-pin .dot { width: 58px; height: 58px; border-radius: 50% 50% 50% 0; transform: rotate(-45deg); background: var(--olive-deep); display: grid; place-items: center; box-shadow: 0 14px 28px -10px rgba(76, 74, 48, .8); animation: pin-bounce 2.6s var(--ease) infinite; }
-.map-pin .dot img { width: 30px; transform: rotate(45deg); }
-.map-pin::after {
-  content: ""; position: absolute; bottom: -10px; left: 50%; width: 22px; height: 8px; margin-left: -11px; border-radius: 50%;
-  background: rgba(76, 74, 48, .3); animation: pin-shadow 2.6s var(--ease) infinite;
-}
-.map-ring { position: absolute; top: 40%; left: 50%; width: 30px; height: 30px; margin: -15px 0 0 -15px; border-radius: 50%; border: 2px solid var(--gold-deep); animation: ring 2.6s ease-out infinite; }
-.map-ring.r2 { animation-delay: 1.3s; }
-@keyframes pin-bounce { 0%, 100% { transform: rotate(-45deg) translate(0, 0); } 50% { transform: rotate(-45deg) translate(5px, -5px); } }
-@keyframes pin-shadow { 0%, 100% { transform: scale(1); opacity: .5; } 50% { transform: scale(.7); opacity: .25; } }
-@keyframes ring { 0% { transform: scale(.4); opacity: 1; } 100% { transform: scale(4.5); opacity: 0; } }
-.map-info {
-  margin: 18px; padding: 20px 22px; border-radius: var(--radius); background: rgba(255, 255, 255, .92);
-  -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); box-shadow: var(--shadow);
-  display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
-}
-.map-info h3 { font-size: 19px; font-weight: 900; color: var(--olive-ink); }
-.map-info p { font-size: 15px; color: var(--ink-soft); }
-
-.contact-list { display: grid; gap: 14px; }
-.contact-item {
-  display: flex; align-items: center; gap: 16px; padding: 18px 20px; border-radius: var(--radius);
-  background: var(--paper); border: 1px solid var(--line);
-  transition: transform .4s var(--ease), box-shadow .4s var(--ease), border-color .3s;
-}
-.contact-item:hover { transform: translateY(-3px); box-shadow: var(--shadow); border-color: rgba(179, 149, 86, .4); }
-.contact-item .ic { width: 52px; height: 52px; border-radius: 16px; display: grid; place-items: center; flex-shrink: 0; background: var(--sand); color: var(--olive-deep); transition: background-color .3s, color .3s, transform .5s var(--ease-spring); }
-.contact-item:hover .ic { background: var(--olive-deep); color: var(--gold); transform: rotate(-8deg); }
-.contact-item .ic svg { width: 24px; height: 24px; }
-.contact-item span { display: block; font-size: 13.5px; font-weight: 700; color: var(--ink-mute); line-height: 1.5; }
-.contact-item b { display: block; font-size: 17px; font-weight: 800; color: var(--olive-ink); direction: ltr; text-align: right; line-height: 1.5; word-break: break-all; }
-.contact-item b.rtl { direction: rtl; word-break: normal; }
-
 /* ---------- شريط الدعم ---------- */
 .support {
   position: relative; border-radius: var(--radius-lg); overflow: hidden; isolation: isolate;
@@ -540,6 +513,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 .footer-col a { font-size: 15px; transition: color .25s, padding .3s var(--ease); display: inline-flex; align-items: center; gap: 8px; }
 .footer-col a:hover { color: var(--gold); padding-inline-start: 4px; }
 .footer-col .ltr { direction: ltr; unicode-bidi: isolate; }
+.footer-col .map-link { margin-top: 4px; color: var(--gold); font-weight: 700; font-size: 14px; }
 .footer-col svg { width: 17px; height: 17px; color: var(--gold); flex-shrink: 0; }
 .footer-bottom {
   margin-top: clamp(40px, 6vw, 64px); padding-top: 22px; border-top: 1px solid rgba(255, 255, 255, .08);
@@ -754,7 +728,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 .js .hero-visual[data-hero] { animation-name: hero-zoom; }
 @keyframes hero-in { to { opacity: 1; transform: none; } }
 @keyframes line-up { to { transform: none; } }
-@keyframes hero-zoom { from { opacity: 0; transform: scale(.85) rotate(-6deg); } to { opacity: 1; transform: none; } }
+@keyframes hero-zoom { from { opacity: 0; transform: scale(.9); } to { opacity: 1; transform: none; } }
 
 /* ---------- التجاوب ---------- */
 @media (max-width: 1100px) {
@@ -814,7 +788,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   .stat:nth-child(3)::before { display: none; }
   .stat:nth-child(n+3) { border-top: 1px solid var(--line); }
 
-  .about-grid, .why-grid, .contact-grid, .feature-card, .teaser { grid-template-columns: 1fr; }
+  .about-grid, .why-grid, .feature-card, .teaser { grid-template-columns: 1fr; }
   .about-visual { max-width: 520px; margin-inline: auto; width: 100%; }
   .about-chip { left: 10px; }
   .feature-media { min-height: 300px; }
@@ -845,7 +819,6 @@ ul { margin: 0; padding: 0; list-style: none; }
   .lb-btn { width: 42px; height: 42px; }
   .gallery { grid-template-columns: repeat(2, 1fr); }
   .g-item.wide { grid-column: span 2; }
-  .map-card { min-height: 340px; }
   .stat-label { font-size: 13.5px; }
   .seg button { padding: 8px 16px; }
 }
