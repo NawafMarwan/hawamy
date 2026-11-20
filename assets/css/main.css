@@ -111,6 +111,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 :focus-visible { outline: 3px solid var(--gold-deep); outline-offset: 3px; border-radius: 6px; }
 
 .container { width: 100%; max-width: var(--container); margin-inline: auto; padding-inline: max(var(--gutter), var(--safe-right)) max(var(--gutter), var(--safe-left)); }
+[hidden] { display: none !important; }
 .sr-only { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .skip-link { position: fixed; top: -100px; right: 16px; z-index: 999; background: var(--olive-deep); color: #fff; padding: 10px 18px; border-radius: 10px; transition: top .2s; }
 .skip-link:focus { top: calc(12px + var(--safe-top)); }
@@ -628,7 +629,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 }
 .album:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
 .album-cover { position: relative; aspect-ratio: 16 / 11; overflow: hidden; background: var(--sand-2); }
-.album-cover img { width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform 1s var(--ease); }
+.album-cover img { width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform 1s var(--ease); }
 .album:hover .album-cover img { transform: scale(1.07); }
 .album-cover::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(36, 35, 26, .55), transparent 55%); }
 .album-count { position: absolute; z-index: 1; bottom: 12px; right: 12px; display: flex; gap: 6px; }
@@ -649,7 +650,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 .g-item {
   position: relative; aspect-ratio: 1; border-radius: var(--radius); overflow: hidden; background: var(--sand-2); cursor: zoom-in; isolation: isolate;
 }
-.g-item img { width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform .9s var(--ease), opacity .5s; opacity: 0; }
+.g-item img { width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform .9s var(--ease), opacity .5s; opacity: 0; }
 .g-item img.loaded { opacity: 1; }
 .g-item:hover img { transform: scale(1.06); }
 .g-item::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(36, 35, 26, .45), transparent 50%); opacity: 0; transition: opacity .35s; }
