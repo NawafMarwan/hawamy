@@ -195,6 +195,32 @@
     }
   }
 
+  /* ---------- المقطع التعريفي: يُحمَّل يوتيوب عند الضغط فقط ---------- */
+  $$("[data-yt]").forEach(function (btn) {
+    var img = $("img", btn), fb = img && img.getAttribute("data-fallback");
+    function useFallback() { if (fb && img.src !== fb) img.src = fb; }
+    if (img) {
+      img.addEventListener("error", function () { if (fb && img.src !== fb) useFallback(); else img.hidden = true; });
+      // يوتيوب يعيد صورة 120×90 حين لا تتوفر النسخة عالية الدقة
+      img.addEventListener("load", function () { if (img.naturalWidth <= 120) useFallback(); });
+      if (img.complete && img.naturalWidth && img.naturalWidth <= 120) useFallback();
+    }
+    btn.addEventListener("click", function () {
+      var id = btn.getAttribute("data-yt");
+      if (!/^[A-Za-z0-9_-]{11}$/.test(id)) return;
+      var wrap = document.createElement("div");
+      wrap.className = "video-frame";
+      var f = document.createElement("iframe");
+      f.src = "https://www.youtube-nocookie.com/embed/" + id + "?autoplay=1&rel=0&modestbranding=1&playsinline=1";
+      f.title = btn.getAttribute("data-yt-title") || "مقطع فيديو";
+      f.allow = "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen";
+      f.setAttribute("allowfullscreen", "");
+      f.setAttribute("referrerpolicy", "strict-origin-when-cross-origin");
+      wrap.appendChild(f);
+      btn.parentNode.replaceChild(wrap, btn);
+    });
+  });
+
   /* ---------- زر العودة للأعلى ---------- */
   $$("[data-to-top]").forEach(function (b) {
     b.addEventListener("click", function () { window.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" }); });
