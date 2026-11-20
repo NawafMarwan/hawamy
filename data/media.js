@@ -43,11 +43,9 @@ window.HAWAMY_MEDIA = {
       date: "16 جمادى الآخرة 1447هـ",
       cover: "assets/img/media/halaqat-1447/h1-03-thumb.webp",
       items: [
-        { type: "image", src: "assets/img/media/halaqat-1447/h1-01.webp", thumb: "assets/img/media/halaqat-1447/h1-01-thumb.webp" },
-        { type: "image", src: "assets/img/media/halaqat-1447/h1-02.webp", thumb: "assets/img/media/halaqat-1447/h1-02-thumb.webp" },
         { type: "image", src: "assets/img/media/halaqat-1447/h1-03.webp", thumb: "assets/img/media/halaqat-1447/h1-03-thumb.webp" },
-        { type: "image", src: "assets/img/media/halaqat-1447/h1-04.webp", thumb: "assets/img/media/halaqat-1447/h1-04-thumb.webp" },
-        { type: "image", src: "assets/img/media/halaqat-1447/h1-05.webp", thumb: "assets/img/media/halaqat-1447/h1-05-thumb.webp" }
+        { type: "image", src: "assets/img/media/halaqat-1447/h1-05.webp", thumb: "assets/img/media/halaqat-1447/h1-05-thumb.webp" },
+        { type: "image", src: "assets/img/media/halaqat-1447/h1-01.webp", thumb: "assets/img/media/halaqat-1447/h1-01-thumb.webp" }
       ]
     },
     {
@@ -56,12 +54,11 @@ window.HAWAMY_MEDIA = {
       occasion: "halaqat",
       year: 1447,
       date: "16 جمادى الآخرة 1447هـ",
-      cover: "assets/img/media/halaqat-1447/h2-02-thumb.webp",
+      cover: "assets/img/media/halaqat-1447/h2-01-thumb.webp",
       items: [
         { type: "image", src: "assets/img/media/halaqat-1447/h2-01.webp", thumb: "assets/img/media/halaqat-1447/h2-01-thumb.webp" },
-        { type: "image", src: "assets/img/media/halaqat-1447/h2-02.webp", thumb: "assets/img/media/halaqat-1447/h2-02-thumb.webp" },
-        { type: "image", src: "assets/img/media/halaqat-1447/h2-03.webp", thumb: "assets/img/media/halaqat-1447/h2-03-thumb.webp" },
-        { type: "image", src: "assets/img/media/halaqat-1447/h2-04.webp", thumb: "assets/img/media/halaqat-1447/h2-04-thumb.webp" }
+        { type: "image", src: "assets/img/media/halaqat-1447/h2-04.webp", thumb: "assets/img/media/halaqat-1447/h2-04-thumb.webp" },
+        { type: "image", src: "assets/img/media/halaqat-1447/h2-03.webp", thumb: "assets/img/media/halaqat-1447/h2-03-thumb.webp" }
       ]
     },
     {
@@ -70,14 +67,11 @@ window.HAWAMY_MEDIA = {
       occasion: "halaqat",
       year: 1447,
       date: "16 جمادى الآخرة 1447هـ",
-      cover: "assets/img/media/halaqat-1447/h3-05-thumb.webp",
+      cover: "assets/img/media/halaqat-1447/h3-06-thumb.webp",
       items: [
-        { type: "image", src: "assets/img/media/halaqat-1447/h3-01.webp", thumb: "assets/img/media/halaqat-1447/h3-01-thumb.webp" },
-        { type: "image", src: "assets/img/media/halaqat-1447/h3-02.webp", thumb: "assets/img/media/halaqat-1447/h3-02-thumb.webp" },
-        { type: "image", src: "assets/img/media/halaqat-1447/h3-03.webp", thumb: "assets/img/media/halaqat-1447/h3-03-thumb.webp" },
+        { type: "image", src: "assets/img/media/halaqat-1447/h3-06.webp", thumb: "assets/img/media/halaqat-1447/h3-06-thumb.webp" },
         { type: "image", src: "assets/img/media/halaqat-1447/h3-04.webp", thumb: "assets/img/media/halaqat-1447/h3-04-thumb.webp" },
-        { type: "image", src: "assets/img/media/halaqat-1447/h3-05.webp", thumb: "assets/img/media/halaqat-1447/h3-05-thumb.webp" },
-        { type: "image", src: "assets/img/media/halaqat-1447/h3-06.webp", thumb: "assets/img/media/halaqat-1447/h3-06-thumb.webp" }
+        { type: "image", src: "assets/img/media/halaqat-1447/h3-01.webp", thumb: "assets/img/media/halaqat-1447/h3-01-thumb.webp" }
       ]
     },
     {
@@ -86,14 +80,11 @@ window.HAWAMY_MEDIA = {
       occasion: "halaqat",
       year: 1447,
       date: "16 جمادى الآخرة 1447هـ",
-      cover: "assets/img/media/halaqat-1447/h4-04-thumb.webp",
+      cover: "assets/img/media/halaqat-1447/h4-05-thumb.webp",
       items: [
-        { type: "image", src: "assets/img/media/halaqat-1447/h4-01.webp", thumb: "assets/img/media/halaqat-1447/h4-01-thumb.webp" },
-        { type: "image", src: "assets/img/media/halaqat-1447/h4-02.webp", thumb: "assets/img/media/halaqat-1447/h4-02-thumb.webp" },
-        { type: "image", src: "assets/img/media/halaqat-1447/h4-03.webp", thumb: "assets/img/media/halaqat-1447/h4-03-thumb.webp" },
-        { type: "image", src: "assets/img/media/halaqat-1447/h4-04.webp", thumb: "assets/img/media/halaqat-1447/h4-04-thumb.webp" },
         { type: "image", src: "assets/img/media/halaqat-1447/h4-05.webp", thumb: "assets/img/media/halaqat-1447/h4-05-thumb.webp" },
-        { type: "image", src: "assets/img/media/halaqat-1447/h4-06.webp", thumb: "assets/img/media/halaqat-1447/h4-06-thumb.webp" }
+        { type: "image", src: "assets/img/media/halaqat-1447/h4-06.webp", thumb: "assets/img/media/halaqat-1447/h4-06-thumb.webp" },
+        { type: "image", src: "assets/img/media/halaqat-1447/h4-02.webp", thumb: "assets/img/media/halaqat-1447/h4-02-thumb.webp" }
       ]
     },
     {
@@ -104,9 +95,7 @@ window.HAWAMY_MEDIA = {
       date: "16 جمادى الآخرة 1447هـ",
       cover: "assets/img/media/halaqat-1447/h5-02-thumb.webp",
       items: [
-        { type: "image", src: "assets/img/media/halaqat-1447/h5-01.webp", thumb: "assets/img/media/halaqat-1447/h5-01-thumb.webp" },
         { type: "image", src: "assets/img/media/halaqat-1447/h5-02.webp", thumb: "assets/img/media/halaqat-1447/h5-02-thumb.webp" },
-        { type: "image", src: "assets/img/media/halaqat-1447/h5-03.webp", thumb: "assets/img/media/halaqat-1447/h5-03-thumb.webp" },
         { type: "image", src: "assets/img/media/halaqat-1447/h5-04.webp", thumb: "assets/img/media/halaqat-1447/h5-04-thumb.webp" },
         { type: "image", src: "assets/img/media/halaqat-1447/h5-05.webp", thumb: "assets/img/media/halaqat-1447/h5-05-thumb.webp" }
       ]
@@ -120,7 +109,6 @@ window.HAWAMY_MEDIA = {
       cover: "assets/img/media/halaqat-1447/h6-01-thumb.webp",
       items: [
         { type: "image", src: "assets/img/media/halaqat-1447/h6-01.webp", thumb: "assets/img/media/halaqat-1447/h6-01-thumb.webp" },
-        { type: "image", src: "assets/img/media/halaqat-1447/h6-02.webp", thumb: "assets/img/media/halaqat-1447/h6-02-thumb.webp" },
         { type: "image", src: "assets/img/media/halaqat-1447/h6-03.webp", thumb: "assets/img/media/halaqat-1447/h6-03-thumb.webp" },
         { type: "image", src: "assets/img/media/halaqat-1447/h6-04.webp", thumb: "assets/img/media/halaqat-1447/h6-04-thumb.webp" }
       ]
@@ -131,13 +119,11 @@ window.HAWAMY_MEDIA = {
       occasion: "halaqat",
       year: 1447,
       date: "16 جمادى الآخرة 1447هـ",
-      cover: "assets/img/media/halaqat-1447/h7-02-thumb.webp",
+      cover: "assets/img/media/halaqat-1447/h7-05-thumb.webp",
       items: [
+        { type: "image", src: "assets/img/media/halaqat-1447/h7-05.webp", thumb: "assets/img/media/halaqat-1447/h7-05-thumb.webp" },
         { type: "image", src: "assets/img/media/halaqat-1447/h7-01.webp", thumb: "assets/img/media/halaqat-1447/h7-01-thumb.webp" },
-        { type: "image", src: "assets/img/media/halaqat-1447/h7-02.webp", thumb: "assets/img/media/halaqat-1447/h7-02-thumb.webp" },
-        { type: "image", src: "assets/img/media/halaqat-1447/h7-03.webp", thumb: "assets/img/media/halaqat-1447/h7-03-thumb.webp" },
-        { type: "image", src: "assets/img/media/halaqat-1447/h7-04.webp", thumb: "assets/img/media/halaqat-1447/h7-04-thumb.webp" },
-        { type: "image", src: "assets/img/media/halaqat-1447/h7-05.webp", thumb: "assets/img/media/halaqat-1447/h7-05-thumb.webp" }
+        { type: "image", src: "assets/img/media/halaqat-1447/h7-04.webp", thumb: "assets/img/media/halaqat-1447/h7-04-thumb.webp" }
       ]
     },
     {
@@ -148,11 +134,9 @@ window.HAWAMY_MEDIA = {
       date: "16 جمادى الآخرة 1447هـ",
       cover: "assets/img/media/halaqat-1447/h8-04-thumb.webp",
       items: [
-        { type: "image", src: "assets/img/media/halaqat-1447/h8-01.webp", thumb: "assets/img/media/halaqat-1447/h8-01-thumb.webp" },
-        { type: "image", src: "assets/img/media/halaqat-1447/h8-02.webp", thumb: "assets/img/media/halaqat-1447/h8-02-thumb.webp" },
-        { type: "image", src: "assets/img/media/halaqat-1447/h8-03.webp", thumb: "assets/img/media/halaqat-1447/h8-03-thumb.webp" },
         { type: "image", src: "assets/img/media/halaqat-1447/h8-04.webp", thumb: "assets/img/media/halaqat-1447/h8-04-thumb.webp" },
-        { type: "image", src: "assets/img/media/halaqat-1447/h8-05.webp", thumb: "assets/img/media/halaqat-1447/h8-05-thumb.webp" }
+        { type: "image", src: "assets/img/media/halaqat-1447/h8-01.webp", thumb: "assets/img/media/halaqat-1447/h8-01-thumb.webp" },
+        { type: "image", src: "assets/img/media/halaqat-1447/h8-03.webp", thumb: "assets/img/media/halaqat-1447/h8-03-thumb.webp" }
       ]
     }
   ]
