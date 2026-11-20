@@ -162,7 +162,11 @@
       b.appendChild(lazyImg(thumbOf(it), it.caption || captionFallback));
       if (it.type === "youtube") { var p = el("span", "play"); p.innerHTML = I.play; b.appendChild(p); }
       if (it.caption) b.appendChild(el("span", "cap", it.caption));
-      b.addEventListener("click", function () { window.HAWAMY.lightbox(items, i); });
+      b.addEventListener("click", function () {
+        window.HAWAMY.lightbox(items.map(function (x) {
+          return x.caption || !captionFallback ? x : { type: x.type, src: x.src, id: x.id, caption: captionFallback };
+        }), i);
+      });
       g.appendChild(b);
     });
     return g;
@@ -212,7 +216,7 @@
     head.appendChild(t);
     head.appendChild(back);
     root.appendChild(head);
-    root.appendChild(galleryGrid(a.items, a.title));
+    root.appendChild(galleryGrid(a.items, a.title + (DATA.occasions[a.occasion] ? " · " + DATA.occasions[a.occasion] : "")));
   }
 
   function render() {
