@@ -747,6 +747,14 @@ ul { margin: 0; padding: 0; list-style: none; }
   :root { --header-h: 68px; }
   .menu-toggle { display: block; }
   .header-tools .btn { display: none; }
+  .header-tools { gap: 16px; }
+  .hijri { min-height: 42px; padding-block: 0; }
+  .menu-toggle { width: 44px; height: 44px; border-radius: 13px; }
+  .menu-toggle span { left: 12px; right: 12px; }
+  .menu-toggle span:nth-child(1) { top: 15px; }
+  .menu-toggle span:nth-child(2) { top: 21px; }
+  .menu-toggle span:nth-child(3) { top: 27px; }
+  .menu-open .menu-toggle span:nth-child(1), .menu-open .menu-toggle span:nth-child(3) { top: 21px; }
   .main-nav {
     position: fixed; inset: 0; z-index: -1; margin: 0;
     padding: calc(var(--header-h) + var(--safe-top) + 24px) max(var(--gutter), var(--safe-right)) calc(32px + var(--safe-bottom));
