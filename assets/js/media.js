@@ -13,7 +13,9 @@
     soon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="9" cy="9" r="2"/><path d="m21 15-5-5L5 21"/></svg>'
   };
 
-  var albums = DATA.albums.slice().sort(function (a, b) { return b.year - a.year; });
+  var GENERAL = "عن المجمع";
+  function yKey(y) { return y ? y : 99999; }
+  var albums = DATA.albums.slice().sort(function (a, b) { return yKey(b.year) - yKey(a.year); });
   var state = { tab: "albums", year: "all", occasion: "all" };
 
   function el(tag, cls, text) {
@@ -95,7 +97,7 @@
       if (years.indexOf(String(a.year)) < 0) years.push(String(a.year));
       if (occs.indexOf(a.occasion) < 0) occs.push(a.occasion);
     });
-    chips(yearF, years, function (v) { return v + "هـ"; }, "year");
+    chips(yearF, years, function (v) { return v === "0" ? GENERAL : v + "هـ"; }, "year");
     chips(occF, occs, function (v) { return DATA.occasions[v] || v; }, "occasion");
     filtersWrap.hidden = yearF.parentNode.hidden && occF.parentNode.hidden;
   }
@@ -118,7 +120,7 @@
       var block = el("section", "year-block");
       var head = el("div", "year-head");
       head.setAttribute("data-reveal", "fade");
-      head.appendChild(el("h2", null, "عام " + y + "هـ"));
+      head.appendChild(el("h2", null, y ? "عام " + y + "هـ" : GENERAL));
       var inYear = list.filter(function (x) { return x.year === y; });
       head.appendChild(el("span", "n", fn.countLabel(inYear)));
       block.appendChild(head);
